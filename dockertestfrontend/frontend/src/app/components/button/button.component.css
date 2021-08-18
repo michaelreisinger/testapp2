@@ -1,0 +1,9 @@
+button {
+    font-size: 2rem;
+    padding: .5rem;
+}
+
+button:hover {
+    color: red;
+    border-radius: .25rem;
+}

@@ -1,0 +1,25 @@
+header {
+    border: 3px solid black;
+}
+
+main {
+    border: 3px solid white;
+    padding: 2rem;
+    margin-top: 1rem;
+}
+
+.container {
+    margin: 2rem;
+    padding: 2rem;
+}
+
+.headline {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: antiquewhite;
+    padding: 0rem 2rem 0rem 2rem;
+}
+
+.status {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: black;
+}

@@ -18,8 +18,9 @@ public class BackendController {
 
     @GetMapping("/test")
     public String test() {
-        this.color = Color.ORANGE.toString();
-        return "test ok - test color RED has the value of " + this.color;
+        this.color = "#60ccd6";
+        return "test ok - test color hasn't been changed" +
+                " and has the default frontend value of " + this.color;
     }
 
     @PostMapping("/choice")
