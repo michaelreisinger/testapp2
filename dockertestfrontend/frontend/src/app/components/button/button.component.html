@@ -1,1 +1,6 @@
-<button>{{ btnText }}</button>
+<div class="container"  [ngStyle]="{background: color}">
+    <h3 class="headline">Backend returns the following color code: <br>
+        <span class="status"> {{ color }} </span>
+    </h3>
+    <button (click)="testConnection()" [disabled]="click">{{ btnText }}</button>
+</div>

@@ -6,14 +6,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./container.component.css']
 })
 export class ContainerComponent implements OnInit {
-  test: string;
   color: string;
 
   constructor() { }
 
   ngOnInit(): void {
-    this.test = "Still inside the frontend part of the application!";
     this.color = "#60ccd6";
+  }
+
+  style: string;
+
+  onColorChange(color: string): string {
+    this.color = color;
+    console.log(this.color);
+    return this.color;
   }
 
 }

@@ -6,6 +6,12 @@ main {
     border: 3px solid white;
     padding: 2rem;
     margin-top: 1rem;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: flex-start;
 }
 
 .container {
@@ -17,9 +23,4 @@ main {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: antiquewhite;
     padding: 0rem 2rem 0rem 2rem;
-}
-
-.status {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    color: black;
 }

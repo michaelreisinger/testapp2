@@ -7,41 +7,67 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Locale;
+import java.util.Random;
 
 @RestController
 public class BackendController {
     private String color;
-    private String name;
+    //private String name;
 
     @Autowired
     public BackendController(){}
 
     @GetMapping("/test")
     public String test() {
-        this.color = "#60ccd6";
-        return "test ok - test color hasn't been changed" +
-                " and has the default frontend value of " + this.color;
-    }
-
-    @PostMapping("/choice")
-    public String postkColorChoice(@RequestBody String choice) {
-        switch (choice.toLowerCase().trim()) {
-            case "a":
+        int choice = 0;
+        Random rand = new Random();
+        choice = rand.nextInt(7);
+        switch (choice) {
+            case 1:
                 this.color = Color.RED.toString();
                 break;
-            case "b":
+            case 2:
                 this.color = Color.GREEN.toString();
                 break;
-            case "c":
-               this.color = Color.BLUE.toString();
+            case 3:
+                this.color = Color.BLUE.toString();
                 break;
-            case "d":
+            case 4:
                 this.color = Color.BROWN.toString();
                 break;
-            case "e":
+            case 5:
                 this.color = Color.YELLOW.toString();
                 break;
-            case "f":
+            case 6:
+                this.color = Color.PURPLE.toString();
+                break;
+            default:
+                this.color = Color.ORANGE.toString();
+                break;
+        }
+        return this.color;
+    }
+
+    /*
+    @PostMapping("/choice")
+    public String postkColorChoice(@RequestBody int choice) {
+        switch (choice) {
+            case 1:
+                this.color = Color.RED.toString();
+                break;
+            case 2:
+                this.color = Color.GREEN.toString();
+                break;
+            case 3:
+               this.color = Color.BLUE.toString();
+                break;
+            case 4:
+                this.color = Color.BROWN.toString();
+                break;
+            case 5:
+                this.color = Color.YELLOW.toString();
+                break;
+            case 6:
                 this.color = Color.PURPLE.toString();
                 break;
             default:
@@ -66,4 +92,5 @@ public class BackendController {
     public String getName() {
         return this.name;
     }
+    */
 }
